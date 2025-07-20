@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareTool Pro</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>ShareTool Pro</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Outils</a>
+      <a href="#">S'inscrire / Connexion</a>
+      <a href="#">Mon Compte</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Louez vos outils en toute sécurité</h2>
+    <button onclick="window.location.href='products.html'">Explorer les outils</button>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 ShareTool Pro</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outils à louer</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>Nos Outils</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="cart.html">Panier</a>
+    </nav>
+  </header>
+
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="images/perceuse.jpg" alt="Perceuse" />
+      <h3>Perceuse Pro</h3>
+      <p>15€/jour</p>
+      <button onclick="addToCart('Perceuse Pro', 15)">Louer</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/compacteur.jpg" alt="Compacteur" />
+      <h3>Compacteur</h3>
+      <p>35€/jour</p>
+      <button onclick="addToCart('Compacteur', 35)">Louer</button>
+    </div>
+
+    <!-- Ajouter d'autres outils ici -->
+  </section>
+
+  <script src="cart.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outils à louer</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>Nos Outils</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="cart.html">Panier</a>
+    </nav>
+  </header>
+
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="images/perceuse.jpg" alt="Perceuse" />
+      <h3>Perceuse Pro</h3>
+      <p>15€/jour</p>
+      <button onclick="addToCart('Perceuse Pro', 15)">Louer</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/compacteur.jpg" alt="Compacteur" />
+      <h3>Compacteur</h3>
+      <p>35€/jour</p>
+      <button onclick="addToCart('Compacteur', 35)">Louer</button>
+    </div>
+
+    <!-- Ajouter d'autres outils ici -->
+  </section>
+
+  <script src="cart.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Dashboard Administrateur</h1>
+  <p>Total des locations: <span id="total-orders">0</span></p>
+  <p>Fonds Escrow: <span id="escrow-balance">0€</span></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat en Direct</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h2>Discussion avec le Propriétaire</h2>
+  <div id="chat-box"></div>
+  
+  <input type="text" id="message" placeholder="Tapez votre message..." />
+  <button onclick="sendMessage()">Envoyer</button>
+
+  <input type="file" id="uploadImage" accept="image/*" onchange="sendImage()" />
+  <video id="videoChat" autoplay></video>
+
+  <script src="chat.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditions d'Utilisation</title>
+</head>
+<body>
+  <h1>Conditions Générales</h1>
+  <p>ShareTool Pro est un simple intermédiaire. Nous ne sommes pas responsables des transactions entre utilisateurs.</p>
+  <p>Les frais de service sont prélevés automatiquement lors de chaque location.</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <h1>Tableau de Bord - ShareTool Pro</h1>
+
+  <div id="summary">
+    <p>Total des locations: <span id="totalRentals">0</span></p>
+    <p>Revenus générés: <span id="totalRevenue">0</span>€</p>
+    <p>Fonds de dons: <span id="donationFund">0</span>€</p>
+  </div>
+
+  <button onclick="manageUsers()">Gérer les utilisateurs</button>
+  <button onclick="viewComplaints()">Consulter les réclamations</button>
+</body>
+<script src="admin.js"></script>
+</html>
+<p>Bonjour <b>{username}</b>,</p>
+<p>Bienvenue dans le magasin de <b>{vendorName}</b> ! Découvrez nos meilleurs outils à louer avec des prix compétitifs.</p>
+<p>Merci pour votre confiance.</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenue sur ShareTool Pro</title>
+</head>
+<body>
+  <h1>Louez et Partagez vos Outils en Toute Sécurité</h1>
+  <button onclick="location.href='catalogue.html'">Explorer le catalogue</button>
+  <button onclick="location.href='register.html'">S'inscrire</button>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ShareTool Pro</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        img { width: 150px; margin-bottom: 10px; }
+        .tool { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Nos Outils</h1>
+
+    <div class="tool">
+        <img src="perceuse.jpg" alt="Perceuse">
+        <h3>Perceuse Pro</h3>
+        <p>15€/jour</p>
+        <button onclick="alert('Vous avez loué Perceuse Pro')">Louer</button>
+    </div>
+
+    <div class="tool">
+        <img src="compacteur.jpg" alt="Compacteur">
+        <h3>Compacteur</h3>
+        <p>35€/jour</p>
+        <button onclick="alert('Vous avez loué Compacteur')">Louer</button>
+    </div>
+
+    <h2>Dashboard Administrateur</h2>
+    <p>Total des locations: 0</p>
+    <p>Fonds Escrow: 0€</p>
+
+    <h3>Discussion avec le Propriétaire</h3>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDgg522Yxthiu5PDvBZenNrr0KkvQOtDXU",
+        authDomain: "share-toolpro.firebaseapp.com",
+        projectId: "share-toolpro",
+        storageBucket: "share-toolpro.appspot.com",
+        messagingSenderId: "872915742215",
+        appId: "1:872915742215:web:e068134fbd05961a29c4a2",
+        measurementId: "G-E92XRKS5SR"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
